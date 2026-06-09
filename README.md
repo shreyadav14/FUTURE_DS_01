@@ -174,7 +174,7 @@ Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook
 - ✅ Full HTML analysis report
 
 ### 🔗 Task Folder
-[`Task_03_Marketing/`](./Task_03_Marketing/)
+[`Task_03_Marketing`](./Task_03_Marketing)
 
 ---
 
