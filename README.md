@@ -25,37 +25,47 @@ This project analyzes business sales data to uncover actionable insights across 
 
 ---
 
-## 🛠️ Tools & Technologies
-
-| Tool | Purpose |
-|------|---------|
-| Python 3.x | Core programming language |
-| Pandas | Data cleaning & transformation |
-| Matplotlib | Data visualization & charts |
-| Seaborn | Heatmaps & styled plots |
-| Jupyter Notebook | Interactive analysis environment |
-
----
-
-## 📁 Project Structure
+## 📁 Repository Structure
 FUTURE_DS_01/
 │
-├── sales_analysis.ipynb          # Main Jupyter Notebook (full analysis)
-├── sales_data.csv                # Raw sales dataset
+├── Task_01_Sales_Analysis/
+│   ├── sales_analysis.ipynb
+│   ├── sales_data.csv
+│   └── outputs/
+│       ├── Sales_Analysis_Report.html
+│       ├── category_summary.csv
+│       └── (6 chart PNGs)
 │
-└── outputs/
-├── Sales_Analysis_Report.html    # Client-ready HTML report
-├── category_summary.csv          # KPI summary table
-├── 01_monthly_trend.png          # Monthly revenue trend chart
-├── 02_category_revenue.png       # Revenue by category
-├── 03_top_products.png           # Top products by revenue
-├── 04_regional_performance.png   # Regional breakdown
-├── 05_quarterly_stacked.png      # Quarterly stacked chart
-└── 06_heatmap.png                # Region × Category heatmap
+├── Task_02_Churn_Analysis/
+│   ├── churn_analysis.ipynb
+│   ├── customer_data.csv
+│   └── outputs/
+│       ├── Churn_Analysis_Report.html
+│       ├── retention_summary.csv
+│       └── (6 chart PNGs)
+│
+├── Task_03_Marketing_Funnel/
+│   ├── funnel_analysis.ipynb
+│   ├── data/funnel_data.csv
+│   └── outputs/
+│       ├── Funnel_Analysis_Report.html
+│       ├── funnel_summary.csv
+│       └── (6 chart PNGs)
+│
+└── README.md
 
 ---
 
-## 📊 Key KPIs
+## ✅ Task 01 — Business Sales Data Analysis
+
+### 📌 Objective
+Analyze business sales data to identify revenue trends, top-selling products,
+high-value categories, and regional performance.
+
+### 🛠️ Tools Used
+Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook
+
+### 📊 Key KPIs
 
 | Metric | Value |
 |--------|-------|
@@ -64,20 +74,111 @@ FUTURE_DS_01/
 | 🧾 Avg Order Value | $390 |
 | 📈 Gross Margin | 34.1% |
 
----
-
-## 🔍 Key Insights
-
-- **Electronics** is the top-performing category with **38% revenue share**
-- **North region** leads all regions with **+25.7% YoY growth**
-- **Q4** accounts for **31% of annual revenue** — strong seasonal pattern
+### 🔍 Key Insights
+- **Electronics** is the top category with **38% revenue share**
+- **North region** leads with **+25.7% YoY growth**
+- **Q4** drives **31% of annual revenue** — strong seasonal trend
 - **ProBook 15 Laptop** is the single highest-revenue product
-- **West region** shows margin pressure — dropped 4.1pp despite revenue growth
-- **Sports category** underperforms at only 3.1% growth vs 18.4% company average
+- **West region** shows margin pressure despite revenue growth
+- **Sports category** underperforms at 3.1% vs 18.4% company average
+
+### 📂 Deliverables
+- ✅ 6 publication-quality charts
+- ✅ KPI summary CSV
+- ✅ Full HTML analysis report
+- ✅ Reproducible Jupyter Notebook
+
+### 🔗 Task Folder
+[`Task_01_Sales_Analysis/`](./Task_01_Sales_Analysis/)
 
 ---
 
-## ▶️ How to Run
+## ✅ Task 02 — Customer Retention & Churn Analysis
+
+### 📌 Objective
+Analyze customer data to identify churn patterns, key retention drivers,
+and customer lifetime trends for a subscription-based business.
+
+### 🛠️ Tools Used
+Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook
+
+### 📊 Key KPIs
+
+| Metric | Value |
+|--------|-------|
+| 👥 Total Customers | 50 |
+| ✅ Active Customers | 28 |
+| ❌ Churned Customers | 22 |
+| 📉 Overall Churn Rate | 44% |
+| ⏱️ Avg Tenure | 7.2 months |
+| 💰 Avg Customer LTV | $312 |
+
+### 🔍 Key Insights
+- **Basic plan** has the highest churn rate (~70%) — price-sensitive segment
+- **High support tickets (6+)** strongly correlate with churn
+- **Inactive users** (45+ days since login) are most likely to churn
+- **Premium plan** retains best — higher engagement and perceived value
+- **Months 0–6** are the highest churn risk window for all plans
+- **North region** has the best retention rate across all plans
+
+### 📂 Deliverables
+- ✅ Cohort retention heatmap
+- ✅ Retention curves by plan
+- ✅ Churn driver analysis charts
+- ✅ CLV comparison (Active vs Churned)
+- ✅ Retention summary CSV
+- ✅ Full HTML analysis report
+
+### 🔗 Task Folder
+[`Task_02_Churn_Analysis/`](./Task_02_Churn_Analysis/)
+
+---
+
+## ✅ Task 03 — Marketing Funnel & Conversion Performance Analysis
+
+### 📌 Objective
+Analyze marketing funnel data to identify conversion drop-offs, channel
+performance, and opportunities to improve lead-to-customer conversion.
+
+### 🛠️ Tools Used
+Python · Pandas · Matplotlib · Seaborn · Jupyter Notebook
+
+### 📊 Key KPIs
+
+| Metric | Value |
+|--------|-------|
+| 🎯 Total Leads | 34,285 |
+| 👥 Total Customers | 2,530 |
+| 📈 Overall Conv. Rate | 7.38% |
+| 💰 Total Revenue | $4.6M |
+| 💸 Total Ad Spend | $542K |
+| 📊 Overall ROI | 748% |
+| 💵 Avg Cost Per Lead | $15.81 |
+| 🧾 Avg Cost Per Customer | $214 |
+
+### 🔍 Key Insights
+- **Paid Ads** drives the highest revenue but also highest cost per customer
+- **Referral channel** has the best conversion rate with lowest cost per lead
+- **Leads → Prospects** is the biggest drop-off stage (~40% lost here)
+- **SQL → Opportunity** stage needs attention — significant drop-off
+- **Age group 25–34** converts best across all channels
+- **Q4 (Oct–Dec)** shows the strongest lead volume and conversion spike
+
+### 📂 Deliverables
+- ✅ Full funnel visualization
+- ✅ Stage-by-stage drop-off analysis
+- ✅ Channel performance & ROI comparison
+- ✅ Conversion heatmap (Channel × Age Group)
+- ✅ Monthly trend analysis
+- ✅ Funnel summary CSV
+- ✅ Full HTML analysis report
+
+### 🔗 Task Folder
+[`Task_03_Marketing_Funnel/`](./Task_03_Marketing_Funnel/)
+
+---
+
+## 🚀 How to Run Any Task
 
 ```bash
 # 1. Clone the repository
@@ -86,22 +187,29 @@ git clone https://github.com/shreyadav14/FUTURE_DS_01
 # 2. Install dependencies
 pip install pandas matplotlib seaborn jupyter
 
-# 3. Launch Jupyter Notebook
+# 3. Navigate to any task folder
+cd Task_01_Sales_Analysis   # or Task_02 / Task_03
+
+# 4. Launch Jupyter Notebook
 jupyter notebook
 
-# 4. Open sales_analysis.ipynb and run Kernel → Restart & Run All
+# 5. Open the .ipynb file and run Kernel → Restart & Run All
 ```
 
 ---
 
-## 📤 Deliverables
+## 🛠️ Tech Stack
 
-- ✅ Cleaned and engineered dataset
-- ✅ 6 publication-quality charts
-- ✅ KPI summary CSV
-- ✅ Full HTML analysis report
-- ✅ Reproducible Jupyter Notebook
+| Library | Version | Purpose |
+|---------|---------|---------|
+| Python | 3.x | Core language |
+| Pandas | Latest | Data manipulation |
+| Matplotlib | Latest | Visualization |
+| Seaborn | Latest | Statistical plots |
+| Jupyter | Latest | Interactive notebooks |
 
 ---
 
-*Submitted as part of the Future Interns Data Science Internship Program*
+*Submitted as part of the Future Interns Data Science Internship Program* 
+
+---
